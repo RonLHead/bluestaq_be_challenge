@@ -16,6 +16,11 @@ public class Elevator {
             if (requestedFloor > current_floor) {
                 direction = "Up";
                 System.out.println("Going " + direction + ". . .");
+                int i = current_floor;
+                while (i < requestedFloor) {
+                    System.out.println("At floor " + i);
+                    i += 1;
+                }
                 current_floor = requestedFloor;
                 direction = "Idle";
                 System.out.println("You are now at floor " + requestedFloor);
@@ -23,6 +28,11 @@ public class Elevator {
             } else if (requestedFloor < current_floor) {
                 direction = "Down";
                 System.out.println("Going " + direction + ". . .");
+                int i = current_floor;
+                while (i > requestedFloor) {
+                    System.out.println("At floor " + i);
+                    i -= 1;
+                }
                 current_floor = requestedFloor;
                 direction = "Idle";
                 System.out.println("You are now at floor " + requestedFloor);
